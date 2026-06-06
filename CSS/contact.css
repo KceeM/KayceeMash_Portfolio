@@ -1,0 +1,211 @@
+#personal-contact {
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+#personal-contact .contact-card {
+
+    max-width: 700px;
+
+    text-align: center;
+
+    padding: 40px;
+
+    background: #15151D;
+
+    border: 1px solid rgba(212,176,106,.15);
+
+    border-radius: 16px;
+}
+
+.email-address {
+
+    margin-top: 20px;
+
+    color: #D4B06A;
+
+    font-weight: 600;
+}
+
+#personal-contact h2 {
+
+    color: #D4B06A;
+
+    margin-bottom: 20px;
+}
+
+#personal-contact p {
+
+    color: #D0D0D0;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+#contact-hero {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+.contact-card {
+
+    max-width: 700px;
+
+    text-align: center;
+
+    padding: 50px;
+
+    background: #15151D;
+
+    border: 1px solid rgba(212,176,106,.15);
+
+    border-radius: 16px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.3);
+}
+
+.contact-card h1 {
+
+    color: #D4B06A;
+
+    margin-bottom: 25px;
+
+    font-size: 2.5rem;
+}
+
+.contact-card p {
+
+    color: #D0D0D0;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+    font-size: 1.1rem;
+}
+
+#social-section {
+
+    text-align: center;
+
+    padding-bottom: 80px;
+}
+
+#social-section h2 {
+
+    color: #D4B06A;
+
+    margin-bottom: 20px;
+}
+
+#social-section p {
+
+    color: #B8B8B8;
+
+    margin: 10px 0;
+}
+
+.social-handle {
+
+    font-size: 1.2rem;
+
+    color: #F5F5F5;
+
+    margin-bottom: 30px;
+}
+
+.social-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+}
+
+.social-links a {
+
+    color: #D4B06A;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(212,176,106,.25);
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    transition: all .3s ease;
+}
+
+.social-links a:hover {
+
+    background: #D4B06A;
+
+    color: #0A0A0F;
+
+    transform: translateY(-3px);
+}
+
+.availability {
+
+    color: #B8B8B8;
+
+    font-size: .95rem;
+}
+
+.contact-closing {
+
+    margin-top: 25px;
+
+    font-size: 1rem;
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    color: #D4B06A;
+
+    letter-spacing: 0.8px;
+
+    opacity: 0.85;
+    display: flex;
+
+    justify-content: center;
+}
+
+.section-divider {
+
+    width: 150px;
+
+    height: 2px;
+
+    margin: 60px auto 40px auto;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #D4B06A,
+        transparent
+    );
+}
+
