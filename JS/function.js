@@ -8,21 +8,94 @@ document.addEventListener("DOMContentLoaded", function () {
         filterSelection("all");
     }
 
-    setupVideoModal();
+    // ==========================
+    // VIDEO MODAL
+    // ==========================
+
+    const modal = document.getElementById("videoModal");
+    const youtubePlayer = document.getElementById("youtubePlayer");
+    const modalVideo = document.getElementById("modalVideo");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".portfolio-item").forEach(item => {
+
+        item.addEventListener("click", function () {
+
+            const type = this.getAttribute("data-type");
+            const videoSrc = this.getAttribute("data-video");
+
+            if (!videoSrc) return;
+
+            modal.style.display = "flex";
+
+            if (type === "youtube") {
+
+                youtubePlayer.style.display = "block";
+                modalVideo.style.display = "none";
+
+                youtubePlayer.src =
+                    `https://www.youtube.com/embed/${videoSrc}?autoplay=1&mute=1`;
+
+            } else {
+
+                youtubePlayer.style.display = "none";
+                modalVideo.style.display = "block";
+
+                modalVideo.src = videoSrc;
+                modalVideo.play();
+            }
+
+        });
+
+    });
+
+    // ==========================
+    // CLOSE BUTTON
+    // ==========================
+
+    closeBtn.addEventListener("click", function () {
+
+        modal.style.display = "none";
+
+        youtubePlayer.src = "";
+
+        modalVideo.pause();
+        modalVideo.src = "";
+
+    });
+
+    // ==========================
+    // CLICK OUTSIDE MODAL
+    // ==========================
+
+    window.addEventListener("click", function (event) {
+
+        if (event.target === modal) {
+
+            modal.style.display = "none";
+
+            youtubePlayer.src = "";
+
+            modalVideo.pause();
+            modalVideo.src = "";
+
+        }
+
+    });
 
 });
 
 
-// ===========================
-// Navigation Buttons
-// ===========================
+// ==========================
+// NAVIGATION BUTTONS
+// ==========================
 
 function setupNavigationButtons() {
 
     const buttons = [
-        { id: 'homeBtn', url: 'index.html' },
-        { id: 'portfolioBtn', url: 'portfolio.html' },
-        { id: 'contactBtn', url: 'contact.html' }
+        { id: "homeBtn", url: "index.html" },
+        { id: "portfolioBtn", url: "portfolio.html" },
+        { id: "contactBtn", url: "contact.html" }
     ];
 
     buttons.forEach(button => {
@@ -31,8 +104,10 @@ function setupNavigationButtons() {
 
         if (btnElement) {
 
-            btnElement.addEventListener('click', function () {
+            btnElement.addEventListener("click", function () {
+
                 window.location.href = button.url;
+
             });
 
         }
@@ -42,9 +117,9 @@ function setupNavigationButtons() {
 }
 
 
-// ===========================
-// Active Navigation Button
-// ===========================
+// ==========================
+// ACTIVE PAGE HIGHLIGHT
+// ==========================
 
 function highlightActiveButton() {
 
@@ -60,22 +135,24 @@ function highlightActiveButton() {
     const activeBtnId = pageMap[currentPage];
 
     if (activeBtnId) {
+
         document
             .getElementById(activeBtnId)
             ?.classList.add("active");
+
     }
 
 }
 
 
-// ===========================
-// Portfolio Filtering
-// ===========================
+// ==========================
+// PORTFOLIO FILTERS
+// ==========================
 
 function filterSelection(category) {
 
     let items =
-        document.querySelectorAll('.portfolio-item');
+        document.querySelectorAll(".portfolio-item");
 
     items.forEach(item => {
 
@@ -89,73 +166,6 @@ function filterSelection(category) {
         } else {
 
             item.style.display = "none";
-
-        }
-
-    });
-
-}
-
-
-// ===========================
-// Video Modal
-// ===========================
-
-function setupVideoModal() {
-
-    const modal =
-        document.getElementById("videoModal");
-
-    const modalVideo =
-        document.getElementById("modalVideo");
-
-    const closeBtn =
-        document.querySelector(".close");
-
-    if (!modal || !modalVideo || !closeBtn) {
-        return;
-    }
-
-    document
-        .querySelectorAll(".portfolio-item")
-        .forEach(item => {
-
-            item.addEventListener("click", function () {
-
-                const videoSrc =
-                    this.getAttribute("data-video");
-
-                if (!videoSrc) return;
-
-                modal.style.display = "flex";
-
-                modalVideo.src = videoSrc;
-
-                modalVideo.play();
-
-            });
-
-        });
-
-    closeBtn.addEventListener("click", function () {
-
-        modal.style.display = "none";
-
-        modalVideo.pause();
-
-        modalVideo.src = "";
-
-    });
-
-    window.addEventListener("click", function (event) {
-
-        if (event.target === modal) {
-
-            modal.style.display = "none";
-
-            modalVideo.pause();
-
-            modalVideo.src = "";
 
         }
 

@@ -292,51 +292,6 @@ section {
 
 
 /* ==========================
-   FOOTER
-========================== */
-
-#main-footer {
-
-    text-align: center;
-
-    padding: 80px 20px;
-
-    border-top: 1px solid rgba(212,176,106,.15);
-
-    margin-top: 100px;
-}
-
-#main-footer h2 {
-
-    color: #D4B06A;
-
-    margin-bottom: 15px;
-}
-
-#main-footer p {
-
-    color: #B8B8B8;
-
-    margin: 8px 0;
-}
-
-.represented {
-
-    margin-top: 25px;
-
-    display: inline-block;
-
-    padding: 10px 20px;
-
-    border-radius: 30px;
-
-    border: 1px solid rgba(212,176,106,.25);
-
-    color: #D4B06A;
-}
-
-
-/* ==========================
    MOBILE
 ========================== */
 

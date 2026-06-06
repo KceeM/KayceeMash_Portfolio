@@ -1,0 +1,310 @@
+/* ==========================
+   GLOBAL RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: #0A0A0F;
+
+    color: #F5F5F5;
+
+    font-family: 'Inter', sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(10, 10, 15, 0.95);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(212,176,106,.15);
+}
+
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo-text {
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #D4B06A;
+
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+nav {
+
+    display: flex;
+
+    gap: 15px;
+}
+
+nav button {
+
+    background: transparent;
+
+    border: 1px solid transparent;
+
+    color: #F5F5F5;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+
+    transition: all .3s ease;
+}
+
+nav button:hover {
+
+    border-color: #D4B06A;
+
+    color: #D4B06A;
+
+    transform: translateY(-2px);
+}
+
+
+/* Active Page */
+
+nav button.active {
+
+    background: #D4B06A;
+
+    color: #0A0A0F;
+
+    font-weight: 600;
+}
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.primary-btn {
+
+    background: #D4B06A;
+
+    color: #0A0A0F;
+
+    border: none;
+
+    padding: 14px 32px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: all .3s ease;
+}
+
+.primary-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgba(212,176,106,.3);
+}
+
+
+.secondary-btn {
+
+    background: transparent;
+
+    border: 1px solid #D4B06A;
+
+    color: #D4B06A;
+
+    padding: 14px 32px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.secondary-btn:hover {
+
+    background: #D4B06A;
+
+    color: #0A0A0F;
+}
+
+
+/* ==========================
+   SECTION SPACING
+========================== */
+
+section {
+    padding: 100px 20px;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+#main-footer {
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    margin-top: 100px;
+
+    border-top: 1px solid rgba(212,176,106,.15);
+}
+
+#main-footer h2 {
+
+    color: #D4B06A;
+
+    margin-bottom: 15px;
+
+    font-size: 2rem;
+
+    letter-spacing: 2px;
+}
+
+#main-footer p {
+
+    color: #B8B8B8;
+
+    margin: 8px 0;
+}
+
+.represented {
+
+    margin-top: 25px;
+
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(212,176,106,.25);
+
+    color: #D4B06A;
+
+    background: rgba(212,176,106,.05);
+}
+
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A0A0F;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4B06A;
+    border-radius: 10px;
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav button {
+
+        padding: 10px 16px;
+    }
+
+    .logo-text {
+
+        font-size: 1.5rem;
+    }
+
+    section {
+
+        padding: 80px 20px;
+    }
+
+}
